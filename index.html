@@ -1,29 +1,85 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Portfolio Template</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="script.js" defer></script>
+  </head>
 
-<html>
-    <head>
-        <title>Web Portfolio</title>
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        <script type="text/javascript" src="script.js"></script>
-    </head>
+  <body>
+    <!-- Header -->
+    <header class="header-container">
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><button id="navbutton">Toggle Light</button></li>
+        </ul>
+      </nav>
+    </header>
 
-    <body>
-        <!-- Header of website (has no purpose right now) -->
-        <div class="header-container">
-            <!-- Nav Bar-->
-            <div class="navbar">
-                <ul>
-                <li><a href=index.html>Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><button id="navbutton">Toggle Light</button></li>
-                </ul>
-            </div>
+    <!-- ===== INTRO SECTION ===== -->
+    <section id="intro-section">
+      <div id="fractal-tree">
+        <canvas id="defaultCanvas0" width="400" height="400"></canvas>
+      </div>
+
+      <div class="intro-text">
+        <h1 class="intro-title">
+          hi, <span class="intro-name">[Your Name]</span> here.<span class="cursor">|</span>
+        </h1>
+        <h2 class="intro-subtitle">I create [things you like].</h2>
+        <p class="intro-desc">
+          I'm a [Your Role / Occupation] from [Your City, Country]. I'm fascinated by [something you're passionate about] and have worked on [projects, achievements, apps, etc.].
+        </p>
+
+        <!-- Download Resume Button -->
+        <a href="/assets/[YourName]_Resume.pdf" class="intro-contact" download>
+          <svg class="mail-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.17v4h6V9h3.17L12 2z"/>
+          </svg>
+          Download Resume
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about">
+      <div class="section-header">
+        <h2 class="section-title">/ about me</h2>
+      </div>
+
+      <div class="about-content">
+        <div class="about-description">
+          <p>
+            I am currently a <b>[Your Current Role]</b> at
+            <a href="[Company URL]" target="_blank">[Company Name]</a>,
+            working in [Your Team / Department]. At the same time,
+            I am studying <b>[Your Course]</b> at
+            <a href="[University URL]" target="_blank">[University Name]</a>.
+          </p>
+
+          <p>Here are some technologies I have been working with:</p>
+          <ul class="tech-stack">
+            <li>[Skill 1]</li>
+            <li>[Skill 2]</li>
+            <li>[Skill 3]</li>
+            <li>[Skill 4]</li>
+            <li>[Skill 5]</li>
+          </ul>
+
+          <p>
+            Outside of work/study, I enjoy [Hobbies / Interests].
+          </p>
         </div>
-        <!-- Add HTML markup elements for your web site below -->
-        <h1>My WebPortfolio </h1>
-        <h2>Welcome to Web Portfolio!</h2>
-        <div></div>
-    </body>
+
+        <div class="about-image">
+          <img src="/assets/[YourPhoto].jpg" alt="[Your Name]" />
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
