@@ -233,10 +233,13 @@ body {
 
 /* ===== PROJECTS SECTION ===== */
 
+/* Seperation div for nav */
 .firstSection{
   margin-top: 100px;
 
 }
+/* Used to establish variables  */
+/* :root basically defines a design system: color palette, spacing, typography, and common component styles. */
 :root{
   --bg: #ffffff;
   --panel: #f6f6f7;
@@ -251,9 +254,10 @@ body {
   --btn-padding: 0.5rem 0.9rem;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
-
+/* sets a universal box-sizing rule for all elements */
 *{box-sizing:border-box}
 html,body{height:100%}
+
 body{
   margin:0;
   background:var(--bg);
