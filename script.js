@@ -3,14 +3,17 @@
  // Minimal JS to make search + filter behave (optional).
     // Drop into page if you want interactive filtering/searching.
     (function () {
+
+      //grabing the elements in a variable
       const grid = document.getElementById('projects-grid');
       const cards = Array.from(grid.querySelectorAll('.card'));
       const search = document.getElementById('search');
       const filterButtons = document.querySelectorAll('.filter');
-
+      //helper functions (show/hide)
       function showCard(card) { card.style.display = ''; }
       function hideCard(card) { card.style.display = 'none'; }
 
+      
       function applyFilter(filter) {
         filterButtons.forEach(b => b.classList.toggle('active', b.dataset.filter === filter));
         cards.forEach(card => {
@@ -19,6 +22,7 @@
         });
       }
 
+      //function to check if test in search bar is present in any of the cards
       function applySearch(q) {
         const txt = q.trim().toLowerCase();
         cards.forEach(card => {
@@ -37,6 +41,7 @@
       }));
 
       // Search input (debounced)
+      //automatically searches for the text writtien in the search bar after 200 milisecs
       let timeout;
       search.addEventListener('input', () => {
         clearTimeout(timeout);
